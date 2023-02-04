@@ -20,19 +20,17 @@ namespace Reiz_Tech_Assignment_2
         {
             branches.Add(branch);
         }
-
+        
+        
         public int GetTreeDepth(Branch branch, int depth)
         {
             int result = depth + 1;
-
             foreach (Branch item in branch.branches)
             {
                 result = Math.Max(result, GetTreeDepth(item, depth + 1));
             }
 
             return result;
-
         }
-
     }
 }
