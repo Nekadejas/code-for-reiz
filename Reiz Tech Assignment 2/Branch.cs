@@ -16,23 +16,23 @@ namespace Reiz_Tech_Assignment_2
         {
             branches = new List<Branch>();
         }
-        public void PushBranch(Branch branch) 
+        public void PushBranch(Branch branch)
         {
             branches.Add(branch);
         }
-        
-        public int GetTreeDepth(Branch branch, int depth) 
+
+        public int GetTreeDepth(Branch branch, int depth)
         {
             int result = depth + 1;
-            
+
             foreach (Branch item in branch.branches)
             {
-                    result = Math.Max(result, GetTreeDepth(item, depth +1));
+                result = Math.Max(result, GetTreeDepth(item, depth + 1));
             }
 
             return result;
 
         }
-        
+
     }
 }
