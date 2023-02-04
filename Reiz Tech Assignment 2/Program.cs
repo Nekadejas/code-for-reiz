@@ -15,7 +15,6 @@
             var branch2211 = new Branch();
             var branch222 = new Branch();
             var branch23 = new Branch();
-            var branch22111 = new Branch();
 
             root.PushBranch(branch1);
             root.PushBranch(branch2);
@@ -27,7 +26,6 @@
             branch22.PushBranch(branch221);
             branch22.PushBranch(branch222);
             branch211.PushBranch(branch2211);
-            branch2211.PushBranch(branch22111);
 
             Console.WriteLine(root.GetTreeDepth(root, 0));
         }

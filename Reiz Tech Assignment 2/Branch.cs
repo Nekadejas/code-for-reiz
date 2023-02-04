@@ -20,8 +20,7 @@ namespace Reiz_Tech_Assignment_2
         {
             branches.Add(branch);
         }
-        
-        
+
         public int GetTreeDepth(Branch branch, int depth)
         {
             int result = depth + 1;
@@ -29,7 +28,6 @@ namespace Reiz_Tech_Assignment_2
             {
                 result = Math.Max(result, GetTreeDepth(item, depth + 1));
             }
-
             return result;
         }
     }
